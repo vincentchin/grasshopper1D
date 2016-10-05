@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grasshopper</title>
+		<style type="text/css">
+			body {
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+			#game-container {
+				display: block;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 205px;
+			}
+
+			.space {
+				width: 100px;
+				height: 100px;
+				margin: 10px auto;
+				border: 1px solid black;
+				border-top: none;
+				float: left;
+				display: inline-block;
+				cursor: pointer;
+			}
+
+			.pink-grasshopper {
+				background: url("img/grasshopper.png") no-repeat center;
+				-webkit-filter: hue-rotate(180deg);
+				filter: hue-rotate(180deg);
+			}
+
+			.green-grasshopper {
+				background: url("img/grasshopper.png") no-repeat center;
+				-webkit-filter: saturate(3); 
+				filter: saturate(3);
+			}
+
+		</style>
+	</head>
+	
+	<body>
+
+		<div id="game-container">
+			<div class="space pink-grasshopper"></div>
+			<div class="space pink-grasshopper"></div>
+			<div class="space pink-grasshopper"></div>
+			<div class="space pink-grasshopper"></div>
+			<div class="space"></div>
+			<div class="space green-grasshopper"></div>
+			<div class="space green-grasshopper"></div>
+			<div class="space green-grasshopper"></div>
+			<div class="space green-grasshopper"></div>
+		</div>
+
+	</body>
+
+	<script type="text/javascript" src="grasshopper.js"></script>
+	
+	<script type="text/javascript">
+		var grasshopper = new Grasshopper("#game-container")
+	</script>
+</html>
